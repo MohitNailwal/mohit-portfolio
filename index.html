@@ -14,21 +14,24 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="#" target="_blank"><strong>Portfolio</strong></a>
-            </div>
-            <ul id="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <div class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="#" target="_blank"><strong>Portfolio</strong></a>
+      </div>
+
+      <!-- Hamburger icon for mobile -->
+      <div id="hamburger"><i class="fas fa-bars"></i></div>
+
+      <ul id="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
     <div class="header">
         <div class="box">
             <div class="details">
@@ -165,7 +168,7 @@ Developed RESTful APIs. Troubleshot and debugged complex issues in both client a
     <div class="list4">
       <div class="objects">
         <div class="obj" data-title="Intern - Web Developer" data-type="XYZ Tech Solutions">
-          <img src="./createch logo.png.crdownload" alt="XYZ Tech Logo">
+          <img src="./createchimage.png.crdownload" alt="XYZ Tech Logo">
         </div>
       </div>
       <div class="info">
@@ -213,6 +216,22 @@ outs.</p>
             </div>
         </div>
     </footer>
-</body>
+ <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Optional: Close menu on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
 </html>
