@@ -140,7 +140,7 @@ body {
 
 /* Header Section */
 .header {
-  background: linear-gradient(135deg, #536dfe, #ff4081);
+background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   padding: 70px 24px;
   text-align: center;
@@ -412,7 +412,7 @@ body {
 
 /* Footer */
 footer {
-  background: #121858;
+  background: #080b3f;
   padding: 28px 0;
   text-align: center;
   color: #aeb4d3;
@@ -493,3 +493,20 @@ footer {
     font-size: 28px;
   }
 }
+   .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 32px; /* Increased from 24px to 32px */
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #9381ff;
+}
+
