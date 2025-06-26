@@ -39,16 +39,72 @@
     <div class="header">
         <div class="box">
             <div class="details">
-                <h2>Hello!</h2>
-                <h3>I’m Mohit,</h3>
-                <p>
+                <!-- <h2 id="typing-text">Hello!</h2>
+                <h3 id="typing-text">I’m Mohit,</h3> -->
+                <!-- <p id="typing-text">
                     I have 6 years of combined experience in IT support and software development, skilled in
                     troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in
                     aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative
                     IT solutions. My developer background helps me bridge support and development, automate tasks, and
                     optimize workflows effectively.
+                </p> -->
+  <div class="details">
+  <!-- Typing text container -->
+  <p id="typing-text" style="line-height: 1.6; font-weight: 400;"></p>
 
-                </p><br>
+  <!-- Buttons shown after typing -->
+ 
+</div>
+
+<script>
+  const lines = [
+    { text: "Hello!", style: "font-size: 35px; font-weight: 900; color: white;" },
+    { text: "I’m Mohit,", style: "font-size: 30px; font-weight: 900; color: white;" },
+    {
+      text: `I have 6 years of combined experience in IT support and software development, skilled in troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative IT solutions. My developer background helps me bridge support and development, automate tasks, and optimize workflows effectively.`,
+      style: "font-size: 20px; color: white;"
+    }
+  ];
+
+  const typingElement = document.getElementById("typing-text");
+  const btns = document.getElementById("after-type-buttons");
+  let lineIndex = 0;
+  let charIndex = 0;
+  function typeNextChar() {
+    if (lineIndex >= lines.length) {
+      btns.style.display = "flex";
+      return;
+    }
+
+    const currentLine = lines[lineIndex];
+    const text = currentLine.text;
+    const style = currentLine.style;
+
+    if (charIndex === 0) {
+      // Start a new span for this line
+      const span = document.createElement("span");
+      span.setAttribute("style", style);
+      span.setAttribute("id", `line-${lineIndex}`);
+      typingElement.appendChild(span);
+    }
+
+    const span = document.getElementById(`line-${lineIndex}`);
+    span.innerHTML += text.charAt(charIndex);
+    charIndex++;
+
+    if (charIndex < text.length) {
+      setTimeout(typeNextChar, 20);
+    } else {
+      // Move to next line
+      typingElement.innerHTML += "<br>";
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeNextChar, 300);
+    }
+  }
+  window.onload = typeNextChar;
+</script>
+
                 <div class="btns">
                     <a href="https://drive.google.com/file/d/1R9irB0j0kjqRYjLSoYbLubamfXXk88zX/view?usp=drive_link"
                         target="_blank" class="btn">Resume</a>
@@ -63,6 +119,7 @@
 
         </div>
     </div>
+    <br>
     <section id="about" class="about">
         <div class="title">
             <h2>About me</h2>
@@ -233,26 +290,46 @@
                     </form>
                 </div>
                 <br>
+                <!-- whatsapp and mobile icon  -->
                 <div>
                         <a href="https://wa.me/971524792549" target="_blank" style="
-    position: fixed;
-    bottom: 120px;
-    left: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    transition: all 0.3s ease;
-">
-  <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
-</a>
+                            position: fixed;
+                            bottom: 120px;
+                            left: 20px;
+                            background-color: #25D366;
+                            color: white;
+                            border-radius: 50%;
+                            width: 65px;
+                            height: 65px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-decoration: none;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                            z-index: 999;
+                            transition: all 0.3s ease;
+                        ">
+                            <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+                        </a>
+                        <a href="tel:+971524792549" style="
+                            position: fixed;
+                            bottom: 120px;
+                            right: 20px;
+                            background-color: #0d6efd; /* Bootstrap Blue */
+                            color: white;
+                            border-radius: 50%;
+                            width: 60px;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-decoration: none;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                            z-index: 999;
+                            transition: all 0.3s ease;
+                        ">
+                            <i class="fa fa-phone" style="font-size: 28px;"></i>
+                        </a>
                 </div>
             <br>
             
