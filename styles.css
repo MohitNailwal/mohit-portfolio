@@ -551,5 +551,69 @@ footer {
 .contact-form-section button:hover {
     background: darkslateblue;
 } 
-/* --------------------whatsapp css--------------- */
+/* --------------------scroll up button--------------- */
+ #backToTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed;
+        bottom: 25%;
+        right: 20px;
+        z-index: 1000;
+        font-size: 22px;
+        background-color: #9db3f0;
+        color: rgb(94, 42, 238);
+        padding: 12px 15px;
+        border-radius: 25%;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+        background-color: #0b5ed7;
+    }
+    /* ------------------skills css------------------------- */
+ .skills {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.skill i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
 

@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+<a href="#" id="backToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
 
 <body>
     <div class="navbar">
@@ -33,77 +36,68 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blogs">Blogs</a></li>
             </ul>
         </div>
     </div>
     <div class="header">
         <div class="box">
             <div class="details">
-                <!-- <h2 id="typing-text">Hello!</h2>
-                <h3 id="typing-text">I’m Mohit,</h3> -->
-                <!-- <p id="typing-text">
-                    I have 6 years of combined experience in IT support and software development, skilled in
-                    troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in
-                    aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative
-                    IT solutions. My developer background helps me bridge support and development, automate tasks, and
-                    optimize workflows effectively.
-                </p> -->
-  <div class="details">
-  <!-- Typing text container -->
-  <p id="typing-text" style="line-height: 1.6; font-weight: 400;"></p>
+                <div class="details">
+                    <!-- Typing text container -->
+                    <p id="typing-text" style="line-height: 1.6; font-weight: 400;"></p>
 
-  <!-- Buttons shown after typing -->
- 
-</div>
+                    <!-- Buttons shown after typing -->
+                </div>
+                <script>
+                    const lines = [
+                        { text: "Hello!", style: "font-size: 35px; font-weight: 900; color: white;" },
+                        { text: "I’m Mohit,", style: "font-size: 30px; font-weight: 900; color: white;" },
+                        {
+                            text: `I have 6 years of combined experience in IT support and software development, skilled in troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative IT solutions. My developer background helps me bridge support and development, automate tasks, and optimize workflows effectively.`,
+                            style: "font-size: 20px; color: white;"
+                        }
+                    ];
 
-<script>
-  const lines = [
-    { text: "Hello!", style: "font-size: 35px; font-weight: 900; color: white;" },
-    { text: "I’m Mohit,", style: "font-size: 30px; font-weight: 900; color: white;" },
-    {
-      text: `I have 6 years of combined experience in IT support and software development, skilled in troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative IT solutions. My developer background helps me bridge support and development, automate tasks, and optimize workflows effectively.`,
-      style: "font-size: 20px; color: white;"
-    }
-  ];
+                    const typingElement = document.getElementById("typing-text");
+                    const btns = document.getElementById("after-type-buttons");
+                    let lineIndex = 0;
+                    let charIndex = 0;
+                    function typeNextChar() {
+                        if (lineIndex >= lines.length) {
+                            btns.style.display = "flex";
+                            return;
+                        }
 
-  const typingElement = document.getElementById("typing-text");
-  const btns = document.getElementById("after-type-buttons");
-  let lineIndex = 0;
-  let charIndex = 0;
-  function typeNextChar() {
-    if (lineIndex >= lines.length) {
-      btns.style.display = "flex";
-      return;
-    }
+                        const currentLine = lines[lineIndex];
+                        const text = currentLine.text;
+                        const style = currentLine.style;
 
-    const currentLine = lines[lineIndex];
-    const text = currentLine.text;
-    const style = currentLine.style;
+                        if (charIndex === 0) {
+                            // Start a new span for this line
+                            const span = document.createElement("span");
+                            span.setAttribute("style", style);
+                            span.setAttribute("id", `line-${lineIndex}`);
+                            typingElement.appendChild(span);
+                        }
 
-    if (charIndex === 0) {
-      // Start a new span for this line
-      const span = document.createElement("span");
-      span.setAttribute("style", style);
-      span.setAttribute("id", `line-${lineIndex}`);
-      typingElement.appendChild(span);
-    }
+                        const span = document.getElementById(`line-${lineIndex}`);
+                        span.innerHTML += text.charAt(charIndex);
+                        charIndex++;
 
-    const span = document.getElementById(`line-${lineIndex}`);
-    span.innerHTML += text.charAt(charIndex);
-    charIndex++;
-
-    if (charIndex < text.length) {
-      setTimeout(typeNextChar, 20);
-    } else {
-      // Move to next line
-      typingElement.innerHTML += "<br>";
-      charIndex = 0;
-      lineIndex++;
-      setTimeout(typeNextChar, 300);
-    }
-  }
-  window.onload = typeNextChar;
-</script>
+                        if (charIndex < text.length) {
+                            setTimeout(typeNextChar, 20);
+                        } else {
+                            // Move to next line
+                            typingElement.innerHTML += "<br>";
+                            charIndex = 0;
+                            lineIndex++;
+                            setTimeout(typeNextChar, 300);
+                        }
+                    }
+                    window.onload = typeNextChar;
+                </script>
 
                 <div class="btns">
                     <a href="https://drive.google.com/file/d/1R9irB0j0kjqRYjLSoYbLubamfXXk88zX/view?usp=drive_link"
@@ -186,6 +180,21 @@
                     </span>
                 </div>
             </div>
+        </div>
+    </section>
+ <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-list ">
+             <div class="skill"><i class="fab fa-html5" style="color:#e34c26;"></i><p>HTML5</p></div>
+        <div class="skill"><i class="fab fa-css3-alt" style="color:#264de4;"></i><p>CSS3</p></div>
+        <div class="skill"><i class="fab fa-js-square" style="color:#f0db4f;"></i><p>JavaScript</p></div>
+        <div class="skill"><i class="fab fa-react" style="color:#61dbfb;"></i><p>React</p></div>
+        <div class="skill"><i class="fab fa-node" style="color:#3c873a;"></i><p>Node.js</p></div>
+        <div class="skill"><i class="fas fa-database" style="color:#f29111;"></i><p>MySQL</p></div>
+        <div class="skill"><i class="fab fa-python" style="color:#306998;"></i><p>Python</p></div>
+        <div class="skill"><i class="fab fa-aws" style="color:#ff9900;"></i><p>AWS</p></div>
+        <div class="skill"><i class="fas fa-server" style="color:#808080;"></i><p>VMware</p></div>
+        <div class="skill"><i class="fas fa-network-wired" style="color:#556B2F;"></i><p>Networking</p></div>
         </div>
     </section>
     <section id="experience" class="experience">
@@ -292,7 +301,7 @@
                 <br>
                 <!-- whatsapp and mobile icon  -->
                 <div>
-                        <a href="https://wa.me/971524792549" target="_blank" style="
+                    <a href="https://wa.me/971524792549" target="_blank" style="
                             position: fixed;
                             bottom: 120px;
                             left: 20px;
@@ -309,9 +318,9 @@
                             z-index: 999;
                             transition: all 0.3s ease;
                         ">
-                            <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
-                        </a>
-                        <a href="tel:+971524792549" style="
+                        <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+                    </a>
+                    <a href="tel:+971524792549" style="
                             position: fixed;
                             bottom: 120px;
                             right: 20px;
@@ -328,11 +337,11 @@
                             z-index: 999;
                             transition: all 0.3s ease;
                         ">
-                            <i class="fa fa-phone" style="font-size: 28px;"></i>
-                        </a>
+                        <i class="fa fa-phone" style="font-size: 28px;"></i>
+                    </a>
                 </div>
-            <br>
-            
+                <br>
+
 
 
                 <!-- -----------------------------------contact from---------------------- -->
@@ -350,6 +359,7 @@
 
     <footer>
         <div class="main-footer">
+             <p style="text-align:center;">© 2025 Mohit Nailwal. All rights reserved.</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/nailwalmohit/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/positve_electron/" target="_blank"><i
@@ -364,6 +374,7 @@
 
 
     <script>
+        // script for automate text writing------
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
 
@@ -379,7 +390,29 @@
                 navLinks.classList.remove('active');
             });
         });
+        //  script for scroll up button
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top
+        backToTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        // ----blog page
+         document.querySelector('a[href="#blogs"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'blogs.html'; // Redirects to blog page
+        });
     </script>
 </body>
+
 
 </html>
