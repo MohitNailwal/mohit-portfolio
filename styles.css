@@ -12,14 +12,12 @@ body {
   line-height: 1.6;
   font-size: 16px;
 }
-
 /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
 /* Navbar */
 .navbar {
   background-color: #1a237e; /* Indigo 900 */
@@ -78,7 +76,7 @@ body {
 }
 
 /* Hamburger menu (hidden desktop) */
-.hamburger {
+#hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
@@ -87,7 +85,7 @@ body {
   justify-content: space-between;
 }
 
-.hamburger div {
+#hamburger div {
   height: 3.5px;
   background: white;
   border-radius: 3px;
@@ -95,15 +93,15 @@ body {
 }
 
 /* Hamburger animation */
-.hamburger.active div:nth-child(1) {
+#hamburger.active div:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
 
-.hamburger.active div:nth-child(2) {
+#hamburger.active div:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active div:nth-child(3) {
+#hamburger.active div:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
@@ -133,7 +131,7 @@ body {
     text-align: center;
   }
 
-  .hamburger {
+  #hamburger {
     display: flex;
   }
 }
