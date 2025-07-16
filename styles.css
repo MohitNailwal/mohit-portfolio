@@ -658,7 +658,7 @@ html[data-theme="dark"] {
   --about-bg: #090000; /* Specific dark background for .about section */
   --about-text: #ffffff; /* White text for .about section paragraphs */
   --about-title: #ffffff; /* White title for .about h2 */
-  --about-shadow: rgba(255, 255, 255, 0.08); /* White shadow for .about */
+  --about-shadow:  rgba(179, 179, 179, 0.5);
   --education-text: #ffffff; /* White text for .education section */
   --education-title: #ffffff; /* White title for .education h2, h3, h4, h6 */
   --experience-text: #ffffff; /* White text for .experience section */
@@ -667,7 +667,7 @@ html[data-theme="dark"] {
   --link-color: #4da8ff; /* Light blue for links */
   --button-bg: #d4a017; /* Darker amber for buttons */
   --button-text: #1a1a1a; /* Dark text for buttons */
-  --shadow-color: rgba(0, 0, 0, 0.5); /* Darker shadow for other elements */
+  --shadow-color: rgba(179, 179, 179, 0.5); /* Darker shadow for other elements */
   --footer-bg: #1a1a1a; /* Darker background for footer in dark mode */
   --footer-text: #ffffff; /* White text for footer in dark mode */
   --contact-bg: #1a1a1a; /* Darker background for contact section in dark mode */
