@@ -614,4 +614,208 @@ footer {
     transform: scale(1.1);
 }
 
+/* -------------------------------dark mode css-------------------------- */
 
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #e8eaf6; /* Matches your nav-links color */
+  font-size: 22px; /* Slightly smaller for modern icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for toggle button */
+.dark-mode-toggle:hover {
+  color: #fbc02d; /* Matches your navbar hover color */
+  transform: scale(1.1); /* Subtle zoom for modern feel */
+}
+
+/* Hide moon icon by default (light mode) */
+.dark-mode-toggle .moon-icon {
+  display: none;
+}
+
+/* Show moon icon and hide sun icon in dark mode */
+html[data-theme="dark"] .dark-mode-toggle .fa-circle-half-stroke {
+  display: none;
+}
+html[data-theme="dark"] .dark-mode-toggle .moon-icon {
+  display: inline-block;
+}
+
+/* Dark mode variables */
+html[data-theme="dark"] {
+  --background-color: #1a1a1a; /* Dark gray for body */
+  --text-color: #e0e0e0; /* Light gray for general text */
+  --navbar-bg: #343435; /* Darker indigo for navbar */
+  --header-bg: linear-gradient(135deg, #000000, #000000); /* Darker gradient for header */
+  --section-bg: #2c2c2c; /* Dark section background for other sections */
+  --about-bg: #090000; /* Specific dark background for .about section */
+  --about-text: #ffffff; /* White text for .about section paragraphs */
+  --about-title: #ffffff; /* White title for .about h2 */
+  --about-shadow: rgba(255, 255, 255, 0.08); /* White shadow for .about */
+  --education-text: #ffffff; /* White text for .education section */
+  --education-title: #ffffff; /* White title for .education h2, h3, h4, h6 */
+  --experience-text: #ffffff; /* White text for .experience section */
+  --experience-title: #ffffff; /* White title for .experience h3, h4 */
+  --card-bg: #333333; /* Dark card background for education/experience */
+  --link-color: #4da8ff; /* Light blue for links */
+  --button-bg: #d4a017; /* Darker amber for buttons */
+  --button-text: #1a1a1a; /* Dark text for buttons */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Darker shadow for other elements */
+  --footer-bg: #1a1a1a; /* Darker background for footer in dark mode */
+  --footer-text: #ffffff; /* White text for footer in dark mode */
+  --contact-bg: #1a1a1a; /* Darker background for contact section in dark mode */
+  --contact-text: #ffffff; /* White text for contact section in dark mode */
+}
+
+
+
+/* Light mode variables (matching your original styles) */
+html {
+  --background-color: #f0f4f8; /* Your body background */
+  --text-color: #2c3e50; /* Your body text */
+  --navbar-bg: #1a237e; /* Your navbar background */
+  --header-bg: linear-gradient(135deg, #6a11cb, #2575fc); /* Your header gradient */
+  --section-bg: #fff; /* Your section background (e.g., .about) */
+  --about-bg: #fff; /* Your .about background */
+  --about-text: #444; /* Your .about paragraph text */
+  --about-title: #283593; /* Your .about h2 color */
+  --about-shadow: rgba(0, 0, 0, 0.08); /* Your .about shadow */
+  --education-text: #3b3b3b; /* Your .education paragraph text */
+  --education-title: #283593; /* Your .education h2, h3, h4 color */
+  --experience-text: #3b3b3b; /* Your .experience paragraph text */
+  --experience-title: #283593; /* Your .experience h3, h4 color */
+  --card-bg: #fff; /* Your card background (e.g., .block1, .list1) */
+  --link-color: #fbc02d; /* Your link color */
+  --button-bg: #fbc02d; /* Your button background */
+  --button-text: #1a237e; /* Your button text */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Your shadow color */
+  --footer-bg: #080b3f; /* Your footer background */
+  --footer-text: #aeb4d3; /* Your footer text color */
+  --contact-bg: #1a237e; /* Your contact section background */
+  --contact-text: #f1f1f1; /* Your contact section text color */
+}
+
+/* Apply variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.contact-form-section {
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.header {
+  background: var(--header-bg);
+  box-shadow: 0 4px 14px var(--shadow-color);
+}
+
+.about {
+  background-color: var(--about-bg);
+  box-shadow: 0 12px 36px var(--about-shadow);
+}
+
+.about .title h2 {
+  color: var(--about-title);
+}
+
+.about .details p {
+  color: var(--about-text);
+}
+
+.education {
+  background-color: var(--section-bg);
+  box-shadow: 0 12px 36px var(--shadow-color);
+}
+
+.education h2, .education .detail h3, .education .detail h4, .education .detail h6 {
+  color: var(--education-title);
+}
+
+.education .detail {
+  color: var(--education-text);
+}
+
+.experience .list1, .experience .list2, .experience .list3, .experience .list4 {
+  background-color: var(--card-bg);
+  box-shadow: 0 14px 40px var(--shadow-color);
+}
+
+.experience h3, .experience .info h4 {
+  color: var(--experience-title);
+}
+
+.experience .info p, .experience .skill-bullets {
+  color: var(--experience-text);
+}
+
+.skills {
+  background-color: var(--section-bg);
+  box-shadow: 0 12px 36px var(--shadow-color);
+}
+
+.btns .btn, #backToTopBtn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+#nav-links li a:hover, #nav-links li a.active, .contact a {
+  color: var(--link-color);
+}
+
+.block1, .block2 {
+  background: var(--card-bg);
+  box-shadow: 0 14px 40px var(--shadow-color);
+}
+
+.contact-form-section form {
+  background: var(--card-bg);
+  box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.contact {
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+.contact h3, .contact h4, .contact p, .contact a {
+  color: var(--contact-text);
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+footer .social-icons a {
+  color: var(--footer-text);
+}
+
+/* Ensure hamburger menu is hidden on desktop */
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+  .dark-mode-toggle {
+    display: inline-block;
+  }
+}
+
+/* Mobile view: show both hamburger and dark mode toggle */
+@media (max-width: 767px) {
+  .dark-mode-toggle {
+    display: inline-block;
+  }
+}
