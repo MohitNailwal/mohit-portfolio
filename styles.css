@@ -678,8 +678,24 @@ html[data-theme="dark"] {
   --footer-text: #ffffff; /* White text for footer in dark mode */
   --contact-bg: #1a1a1a; /* Darker background for contact section in dark mode */
   --contact-text: #ffffff; /* White text for contact section in dark mode */
+  --placeholder-color: #f1eaea; 
 }
-
+/* contact form darkmode */
+html[data-theme="dark"] .contact-form-section form {
+  background-color: #333435;
+}
+html[data-theme="dark"] .contact-form-section form input,
+html[data-theme="dark"] .contact-form-section form textarea {
+  border: 1px white;
+  border-radius: 4px;
+  background-color: gray;
+  color: var(--contact-text);
+}
+html[data-theme="dark"] .contact-form-section form input::placeholder,
+html[data-theme="dark"] .contact-form-section form textarea::placeholder {
+  color: var(--placeholder-color);
+ 
+}
 
 
 /* Light mode variables (matching your original styles) */
@@ -706,6 +722,7 @@ html {
   --footer-text: #aeb4d3; /* Your footer text color */
   --contact-bg: #1a237e; /* Your contact section background */
   --contact-text: #f1f1f1; /* Your contact section text color */
+  
 }
 
 /* Apply variables */
@@ -713,10 +730,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-.contact-form-section {
-    /* background-color: var(--navbar-bg); */
-    /* color: var(--text-color) */
-}
+
 
 .navbar {
   background-color: var(--navbar-bg);
@@ -794,7 +808,7 @@ body {
 }
 
 .contact-form-section form {
-  background: var(--card-bg);
+
   box-shadow: 0 0 15px var(--shadow-color);
 }
 
@@ -834,4 +848,11 @@ footer .social-icons a {
 }
 
 
-
+/* //for map */
+@media (max-width: 768px) {
+    .box iframe {
+      margin-top: 10%;
+        height: 180px !important;
+        width: 100%;
+    }
+}

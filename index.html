@@ -470,13 +470,12 @@
     </section>
     <div class="contact" id="contact">
         <div class="container-sm">
-            <div class="box">
-                <h3>Contact</h3><br>
+            <h3>Get in Touch with Me</h3><br>
+            <div class="box" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
                 <!-- -----------------------------------contact from---------------------- -->
-                <div id="contact-form" class="contact-form-section ">
-
+                <div id="contact-form" class="contact-form-section"
+                    style="flex: 1; min-width: 300px; margin: 0; padding: 0;">
                     <form action="https://api.web3forms.com/submit" method="POST">
-
                         <input type="hidden" name="access_key" value="40b9cb8d-6cab-4d76-af1e-b201cb7dbeef">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="text" id="name" name="name" placeholder="Name" required>
@@ -489,64 +488,78 @@
                         <button type="submit">Submit</button>
                     </form>
                 </div>
-                <br>
-                <!-- whatsapp and mobile icon  -->
-                <div>
-                    <a href="https://wa.me/971524792549" target="_blank" style="
-                            position: fixed;
-                            bottom: 120px;
-                            left: 20px;
-                            background-color: #25D366;
-                            color: white;
-                            border-radius: 50%;
-                            width: 65px;
-                            height: 65px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-decoration: none;
-                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-                            z-index: 999;
-                            transition: all 0.3s ease;
-                        ">
-                        <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
-                    </a>
-                    <a href="tel:+971524792549" style="
-                            position: fixed;
-                            bottom: 120px;
-                            right: 20px;
-                            background-color: #0d6efd; /* Bootstrap Blue */
-                            color: white;
-                            border-radius: 50%;
-                            width: 60px;
-                            height: 60px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-decoration: none;
-                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                            z-index: 999;
-                            transition: all 0.3s ease;
-                        ">
-                        <i class="fa fa-phone" style="font-size: 28px;"></i>
-                    </a>
-                </div>
-                <br>
-                <!-- -----------------------------------contact from--------------------------------- -->
-                <div class="text" id="contactme">
-                    <p><i class="fas fa-envelope"></i>
-                        <a href="mailto:nailwalmohit28@gmail.com" class="email-link"
-                            style="font-size: 10px;">nailwalmohit28@gmail.com</a>
-                        </a>
-                    <div class="location">
-                        <p><i class="fa fa-location-arrow" aria-hidden="true" style='font-size:15px'></i> Dubai, United
-                            Arab Emirates</p>
-
-                        <p></p><i class="fa fa-phone" style="font-size:16px"></i> +971-524792549</p>
-                    </div>
+                <!-- ---------------------------map----------------------------- -->
+                <div style="flex: 1; margin: 0; padding: 0; min-width: 300px;">
+                    <iframe style="filter:grayscale(1) invert(1); border:none" ;
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.2395801569796!2d55.29369057538388!3d25.262524877668962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4315a016d01f%3A0x280c430ba1577226!2sMeena%20Bazar%20Burdubai!5e0!3m2!1sen!2sae!4v1754056686767!5m2!1sen!2sae&style=feature:all|element:labels|visibility:off&style=feature:geometry|color:0x242f3e&style=feature:landscape|color:0x2c3e50&style=feature:poi|visibility:off&style=feature:road|color:0x3498db&style=feature:transit|visibility:off&style=feature:water|color:0x2980b9"
+                        width="70%" height="410" style="border:0; max-width: 100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+            <br>
+            <!-- whatsapp and mobile icon  -->
+            <div>
+                <a href="https://wa.me/971524792549" target="_blank" style="
+                                            position: fixed;
+                                            bottom: 120px;
+                                            left: 20px;
+                                            background-color: #25D366;
+                                            color: white;
+                                            border-radius: 50%;
+                                            width: 65px;
+                                            height: 65px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-decoration: none;
+                                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                                            z-index: 999;
+                                            transition: all 0.3s ease;
+                                        ">
+                    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+                </a>
+                <a href="tel:+971524792549" style="
+                                            position: fixed;
+                                            bottom: 120px;
+                                            right: 20px;
+                                            background-color: #0d6efd; /* Bootstrap Blue */
+                                            color: white;
+                                            border-radius: 50%;
+                                            width: 60px;
+                                            height: 60px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-decoration: none;
+                                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                                            z-index: 999;
+                                            transition: all 0.3s ease;
+                                        ">
+                    <i class="fa fa-phone" style="font-size: 28px;"></i>
+                </a>
+            </div>
+            <br>
+            <!-- -----------------------------------contact from--------------------------------- -->
+            <div class="text" id="contactme">
+
+                <i class="fas fa-envelope"></i>
+                <a style="display: inline-block; text-decoration: none; cursor: pointer; font-size: 15px; color: inherit"
+                    onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+                    href="mailto:nailwalmohit28@gmail.com" class="email-link">
+                    nailwalmohit28@gmail.com
+                </a>
+                <p>
+                    <i class="fa fa-location-arrow" aria-hidden="true" style='font-size:15px'></i> Dubai, United
+                    Arab Emirates
+                </p>
+                <a href="tel:+971524792549"
+                    style="font-size: 15px; display: inline-block; text-decoration: none; cursor: pointer; color: inherit;"
+                    onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                    <i class="fa fa-phone"></i> +971-524792549
+                </a>
+            </div>
         </div>
+    </div>
     </div>
     <footer>
         <div class="main-footer">
