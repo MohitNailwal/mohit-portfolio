@@ -466,4 +466,60 @@
         transform: rotate(360deg);
       }
     }
- 
+    /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  z-index: 0;
+  color: white;
+}
+
+/* 🔹 Fullscreen Video Background */
+.video-background {
+  position: fixed;   /* sticks to viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;       /* push behind everything */
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional Gradient Overlay */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: rgba(34, 34, 34, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* keep your existing navbar, header, main-content, cards, footer styles as-is... */
