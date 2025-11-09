@@ -185,7 +185,7 @@ body {
 /* About Section */
 .about {
   background-color: #fff;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 60px auto;
   padding: 54px 32px;
   border-radius: 18px;
@@ -224,7 +224,7 @@ body {
   background-color: #e8ebff;
   padding: 48px 28px;
   border-radius: 20px;
-  max-width: 920px;
+  max-width: 1200px;
   margin: 0 auto 64px;
   box-shadow: 0 12px 32px rgba(83, 109, 254, 0.2);
 }
@@ -290,7 +290,7 @@ body {
 
 /* Experience Section */
 .experience {
-  max-width: 920px;
+  max-width: 1200px;
   margin: 0 auto 64px;
   padding: 0 28px;
 }
@@ -319,6 +319,7 @@ body {
   gap: 28px;
   flex-wrap: wrap;
   transition: box-shadow 0.3s ease;
+  
 }
 
 .list1:hover, .list2:hover, .list3:hover, .list4:hover {
@@ -432,7 +433,7 @@ footer {
 /* Responsive tweaks */
 @media (max-width: 1024px) {
   .header .box {
-    flex-direction: column;
+    flex-direction:column;
     text-align: center;
   }
 
@@ -450,12 +451,14 @@ footer {
   }
 
   .education .blocks {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .list1, .list2, .list3, .list4 {
-    flex-direction: column;
-  }
+    flex-direction: row;
+   gap: 2px;
+}
+
 }
 
 @media (max-width: 480px) {
