@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="./istockphoto-470301340-612x612.jpg">
   <link rel="stylesheet" type="text/css" href="blogcss.css">
-
 </head>
 
 <body>
@@ -22,11 +21,11 @@
       <div id="hamburger"><i class="fas fa-bars"></i></div>
       <ul id="nav-links">
         <li><a href="index.html#" class="">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#certifications">Certifications</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
         <li><a href="#blogs">Blogs</a></li>
       </ul>
     </div>
@@ -38,7 +37,6 @@
   </div>
   <div class="video-overlay"></div>
 
-
   <!-- Header -->
   <header>
     <p>Professional IT Support & Infrastructure Solutions for Dubai's Leading Organizations</p>
@@ -46,8 +44,6 @@
 
   <!-- Main Content -->
   <div class="main-content">
-
-
     <div class="cards-grid">
       <!-- Dubai Airport IT Infrastructure -->
       <div class="project-card">
@@ -197,7 +193,7 @@
       <!-- Remote Support Solution -->
       <div class="project-card">
         <div class="card-header">
-          <i class="fas fa-remote-desktop"></i> Remote IT Support
+          <i class="fas fa-desktop"></i> Remote IT Support
         </div>
         <div class="card-preview">
           <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop"
@@ -245,6 +241,14 @@
     document.getElementById('hamburger').addEventListener('click', function () {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('active');
+    });
+
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.remove('active');
+      });
     });
 
     // Smooth scrolling for anchor links

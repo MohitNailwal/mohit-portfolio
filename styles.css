@@ -177,8 +177,8 @@ body {
 }
 
 .btns .btn:hover {
-  background-color: #1a237e;
-  color: #fbc02d;
+  background-color: #fbc02d;
+  color: #1a237e;
   box-shadow: 0 5px 25px rgba(26, 35, 126, 0.7);
 }
 
@@ -539,7 +539,7 @@ footer {
  #backToTopBtn {
         display: none; /* Hidden by default */
         position: fixed;
-        bottom: 25%;
+        bottom: 40%;
         right: 20px;
         z-index: 1000;
         font-size: 22px;
@@ -664,6 +664,7 @@ html[data-theme="dark"] {
   --contact-bg: #1a1a1a; /* Darker background for contact section in dark mode */
   --contact-text: #ffffff; /* White text for contact section in dark mode */
   --placeholder-color: #f1eaea; 
+  --mobile-menu-bg: #2c2c2c; /* Dark background for mobile menu */
 }
 /* contact form darkmode */
 html[data-theme="dark"] .contact-form-section form {
@@ -707,7 +708,7 @@ html {
   --footer-text: #aeb4d3; /* Your footer text color */
   --contact-bg: #1a237e; /* Your contact section background */
   --contact-text: #f1f1f1; /* Your contact section text color */
-  
+  --mobile-menu-bg: #283593; /* Light mode mobile menu background */
 }
 
 /* Apply variables */
@@ -727,7 +728,6 @@ body {
   background-color: var(--about-bg);
   box-shadow: 0 12px 36px var(--about-shadow);
 }
-
 .about .title h2 {
   color: var(--about-title);
 }
@@ -809,6 +809,17 @@ footer {
 
 footer .social-icons a {
   color: var(--footer-text);
+}
+
+/* FIXED: Dark mode for mobile sidebar */
+@media (max-width: 768px) {
+  #nav-links {
+    background-color: var(--mobile-menu-bg);
+  }
+  
+  html[data-theme="dark"] #nav-links {
+    background-color: var(--mobile-menu-bg);
+  }
 }
 
 /* Ensure hamburger menu is hidden on desktop */
