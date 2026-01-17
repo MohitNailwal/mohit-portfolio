@@ -579,7 +579,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 0 20px;
+    padding: 1 20px;
 }
 
 .skill {
