@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfollio of mohit">
+    <meta name="author" content="mohit">
+    <meta name="keywords" content="Portfolio, Developer, Engineer">
+    <title>Mohit Tech Portfolio</title>
+    <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="./istockphoto-470301340-612x612.jpg">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/11/09/08/20251109081515-R6EGTAMZ.js" defer></script>
+</head>
+<a href="#" id="backToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" target="_blank"><strong>PORTFOLIO</strong></a>
+            </div>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon moon-icon"></i>
+                <i class="fa-solid fa-circle-half-stroke"></i>
+
+            </button>
+            <!-- Hamburger icon for mobile -->
+            <div id="hamburger"><i class="fas fa-bars"></i></div>
+            <ul id="nav-links">
+                <li><a href="#" class="">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src=".\assets\5453622-uhd_3840_2160_24fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">
+
+            <div class="details">
+                <div class="details">
+                    <!-- Typing text container -->
+                    <p id="typing-text" style="line-height: 1.6; font-weight: 400;"></p>
+                    <!-- Buttons shown after typing -->
+                </div>
+                <script>
+                    const lines = [
+                        { text: "Hello!", style: "font-size: 35px; font-weight: 900; color: white;" },
+                        { text: "I’m Mohit,", style: "font-size: 30px; font-weight: 900; color: white;" },
+                        {
+                            text: `I have 6 years of combined experience in IT support and software development, skilled in troubleshooting, system maintenance, and coding. I have worked with clients in Dubai’s and India in aviation, retail, and manufacturing sectors, delivering efficient technical support and innovative IT solutions. My developer background helps me bridge support and development, automate tasks, and optimize workflows effectively.`,
+                            style: "font-size: 20px; color: white;"
+                        }
+                    ];
+                    const typingElement = document.getElementById("typing-text");
+                    const btns = document.getElementById("after-type-buttons");
+                    let lineIndex = 0;
+                    let charIndex = 0;
+                    function typeNextChar() {
+                        if (lineIndex >= lines.length) {
+                            btns.style.display = "flex";
+                            return;
+                        }
+
+                        const currentLine = lines[lineIndex];
+                        const text = currentLine.text;
+                        const style = currentLine.style;
+
+                        if (charIndex === 0) {
+                            // Start a new span for this line
+                            const span = document.createElement("span");
+                            span.setAttribute("style", style);
+                            span.setAttribute("id", `line-${lineIndex}`);
+                            typingElement.appendChild(span);
+                        }
+
+                        const span = document.getElementById(`line-${lineIndex}`);
+                        span.innerHTML += text.charAt(charIndex);
+                        charIndex++;
+
+                        if (charIndex < text.length) {
+                            setTimeout(typeNextChar, 20);
+                        } else {
+                            // Move to next line
+                            typingElement.innerHTML += "<br>";
+                            charIndex = 0;
+                            lineIndex++;
+                            setTimeout(typeNextChar, 300);
+                        }
+                    }
+                    window.onload = typeNextChar;
+                </script>
+
+                <div class="btns">
+                    <a href="https://drive.google.com/file/d/1zKATY5m-aEu9V8eiLoE01C8Ta7ZLjgbZ/view?usp=drive_link"
+                        target="_blank" class="btn">Resume</a>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image">
+                    <img src=".\assets\profile2.jpg" alt="Sutharsan" srcset="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <section id="about" class="about">
+        <div class="title">
+            <h2>About me</h2>
+        </div>
+        <div class="details">
+            <p>
+                I am an experienced IT Support Specialist with a strong background in troubleshooting, technical
+                support, and system maintenance, combined with hands-on experience as a software developer. Skilled
+                in diagnosing and resolving hardware, software, and networking issues, I excel at providing timely
+                and efficient support to end-users and ensuring seamless IT operations.
+                My developer experience enables me to understand complex technical environments, automate tasks, and
+                contribute to software development projects, bridging the gap between support and development teams.
+                Proficient in multiple programming languages and development frameworks, I bring a problem-solving
+                mindset and technical versatility to every project.
+                I am passionate about leveraging my dual expertise to enhance system performance, optimize
+                workflows, and deliver innovative IT solutions that meet business needs.
+            </p>
+            <p>
+                Throughout my career, I have successfully supported diverse industries, including aviation, retail, and
+                manufacturing, particularly within the Dubai market. My ability to adapt quickly to new technologies and
+                environments has enabled me to streamline IT processes, reduce downtime, and improve user satisfaction.
+                By combining technical support expertise with software development skills, I effectively automate
+                routine tasks, develop custom tools, and contribute to continuous improvement initiatives. I am
+                committed to delivering reliable, scalable solutions that drive operational efficiency and support
+                business growth.
+            </p>
+        </div>
+    </section>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="blocks">
+            <div class="block1">
+                <div class="edu">
+                    <img src=".\assets\logo1.jpg" alt="MSEC Logo">
+                </div>
+                <div class="detail">
+                    <span>
+                        <h3 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://aktu.ac.in/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                Dr. APJ Abdul Kalam Technical University
+                            </a>
+                        </h3>
+                    </span>
+                    <span>
+                        <h4>BTech. Computer Science Engineering </h4>
+                    </span>
+                    <span>
+                        <h6 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://mgmnoida.org/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                MGM's College of Engineering & Technology, Noida 
+                            </a>
+                        </h6>
+                        <h6>2016-2020</h6>
+                    </span>
+
+                </div>
+            </div><br>
+            <div class="block2">
+                <div class="edu">
+                    <img src=".\assets\logo2.jpg" alt="MSEC Logo">
+                </div>
+                <div class="detail">
+                    <span>
+                        <h3 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://jhpschool.com/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                JHPS Public School, Delhi
+                            </a>
+                        </h3>
+                    </span>
+                    <span>
+                        <h4>Higher Secondary Education</h4>
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://www.cbse.gov.in/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                CBSE
+                            </a>
+                        </h4>
+                    </span>
+                    <span>
+                        <h6>2014-2016 </h6>
+                    </span><br>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill"><i class="fa-brands fa-html5" style="color:#e34c26;"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-wordpress" style="color:#21759b;"></i>
+                <p>WordPress</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-magento" style="color:#21759b;"></i>
+                <p>Magento</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-php" style="color:#777bb4;"></i>
+                <p>PHP</p>
+            </div>
+            <div class="skill"><i class="fab fa-aws" style="color:#ff9900;"></i>
+                <p>AWS</p>
+            </div>
+            <div class="skill"><i class="fas fa-server" style="color:#808080;"></i>
+                <p>VMware</p>
+            </div>
+            <div class="skill"><i class="fas fa-network-wired" style="color:#556B2F;"></i>
+                <p>Networking</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-bootstrap" style="color:#563d7c;"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-wind" style="color:#06b6d4;"></i>
+                <p>Tailwind CSS</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-git-alt" style="color:#f05033;"></i>
+                <p>Git</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-github" style="color:#181717;"></i>
+                <p>GitHub</p>
+            </div>
+            <div class="skill"><i class="fab fa-css3-alt" style="color:#264de4;"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="skill"><i class="fab fa-js-square" style="color:#f0db4f;"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill"><i class="fab fa-react" style="color:#61dbfb;"></i>
+                <p>React</p>
+            </div>
+            <div class="skill"><i class="fab fa-node" style="color:#3c873a;"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill"><i class="fas fa-database" style="color:#f29111;"></i>
+                <p>MySQL</p>
+            </div>
+            <div class="skill"><i class="fas fa-database" style="color:#e21c0e;"></i>
+                <p>Oracle</p>
+            </div>
+            <div class="skill"><i class="fab fa-python" style="color:#306998;"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-code" style="color:#d4a017;"></i>
+                <p>C++</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-docker" style="color:#0db7ed;"></i>
+                <p>Docker</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-windows" style="color:#0078d6;"></i>
+                <p>Windows Server</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-linux" style="color:#fcc624;"></i>
+                <p>Linux Server</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-shield-alt" style="color:#ff4500;"></i>
+                <p>Firewalls</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-lock" style="color:#4682b4;"></i>
+                <p>VPN</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-print" style="color:#696969;"></i>
+                <p>Printers</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-video" style="color:#800080;"></i>
+                <p>CCTV</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-mobile-alt" style="color:#20b2aa;"></i>
+                <p>Handheld Devices</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-credit-card" style="color:#2e8b57;"></i>
+                <p>Card Machines</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-fingerprint" style="color:#9932cc;"></i>
+                <p>Biometric Devices</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-puzzle-piece" style="color:#ffa500;"></i>
+                <p>Problem Solving</p>
+            </div>
+            <div class="skill"><i class="fa-brands fa-figma" style="color:#f24e1e;"></i>
+                <p>Figma</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-exchange-alt" style="color:#008080;"></i>
+                <p>REST APIs</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-rocket" style="color:#ff6200;"></i>
+                <p>Postman</p>
+            </div>
+            <div class="skill"><i class="fa-solid fa-database" style="color:#4db33d;"></i>
+                <p>MongoDB</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="skills">
+        <h2>Certifications</h2>
+        <div>
+            <img src=".\assets\mcsa.png" style="width: 211px;" alt="">
+             <img src=".\assets\ccna.png" style="margin-bottom: 10px;" alt="">
+             <img src=".\assets\itil circle.png" style="margin-bottom: 10px;" alt="">
+            <img src=".\assets\MCSA-Certification-300x210.png" alt="">
+             <img src=".\assets\comptia.png" style="margin-bottom: 10px;" alt="">
+           
+      
+          </div>   
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="experience">
+            <h3 style="margin-top: 10%;">My Experience</h3>
+            <div class="list">
+                <div class="list1">
+                    <div class="objects">
+                        <div class="obj" data-title="" data-type="">
+                            <a href="https://www.sharjahairport.ae/en/" target="_blank">
+                                <img src=".\assets\Sharjah_Airport_logo.svg.png" alt="Sharjah Airport"
+                                    style="width: 100%; height: 138px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://www.sharjahairport.ae/en/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                Application Support Engineer - Sharjah Airport - (Alpha Data PJSC), UAE
+                            </a>
+                        </h4>
+                        <ul class="skill-bullets">
+                            <li>Provide end-to-end application support for 60+ airport applications.</li>
+                            <li>Handle incidents, service requests, and user access/role management using ManageEngine
+                                ITSM and AD Manager Plus.</li>
+                            <li>Maintain and troubleshoot Oracle-based applications including PL/SQL procedures, Oracle
+                                Forms, and backend components, and support PHP and ASP.NET MVC / C# applications, including bug fixing,
+                                performance monitoring, and updates.</li>
+                            <li>Monitor critical airport systems such as FIDS, AODB, Passenger Processing Systems,
+                                APIs, logs, batch jobs.</li>
+                            <li>Respond to application issues raised by airport operations teams
+                                performing root cause analysis.</li>
+                            <li>Coordinate with vendors, airport authorities, and internal IT teams to resolve critical
+                                production incidents within SLAs & Support configuration changes, software patches, and releases while maintaining SOPs,
+                                documentation, and change records.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="list1">
+                    <div class="objects">
+                        <div class="obj" data-title="" data-type="">
+                            <a href="https://adilstore.com/" target="_blank">
+                                <img src=".\assets\project1.webp" alt="AL ADIL TRADING" style="width: 100%; height: 138px;">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://adilstore.com/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                IT Support Engineer – AL ADIL TRADING, Dubai, UAE
+                            </a>
+                        </h4>
+
+                        <ul class="skill-bullets">
+                            <li>Support and manage Retail ERP systems, including Microsoft Dynamics GP, Business
+                                Central, Zoho ERP, GoFrugal, and custom solutions.</li>
+                            <li>Administer virtualized environments using VMware or Hyper-V.</li>
+                            <li>Configure and manage network settings, including TCP/IP, VLANs, firewalls, and VPNs.
+                            </li>
+                            <li>Maintain and support Point of Sale (POS) systems for retail operations.</li>
+                            <li>Support cloud platforms such as AWS, Azure, and Google Cloud.</li>
+                            <li>Ensure seamless operation of servers, networks, and hardware across all locations.</li>
+                            <li>Conduct stock evaluation and inventory counting for efficient stock management.</li>
+                            <li>Oversee comprehensive inventory management for all stock categories.</li>
+                            <li>Design and execute digital marketing campaigns using Netcore for newsletters and
+                                promotional emails.</li>
+                            <li>Manage e-commerce store backend, including uploading product offers, images, and
+                                descriptions for seamless online retail operations.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="list2">
+                    <div class="objects">
+                        <div class="obj" data-title="IT Support Engineer" data-type="Demoooooooooooo">
+                            <a href="https://www.ednsgroup.com/" target="_blank">
+                                <img src=".\assets\project2.png" alt="AL ADIL TRADING" style="width: 100%; height: 276px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://www.ednsgroup.com/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                FULL STACK DEVELOPER - DNS GROUP, Delhi, India
+                            </a>
+                        </h4>
+                        <ul class="skill-bullets">
+                            <li>Implemented responsive UI/UX designs & Functionality.</li>
+                            <li>Deployed applications to cloud platforms.</li>
+                            <li>Developed RESTful APIs.</li>
+                            <li>Troubleshot and debugged complex issues in both client and server side.</li>
+                            <li>Design and maintain relational databases using SQL for efficient data storage,
+                                retrieval, optimization.</li>
+                            <li>Collaborated with cross-functional teams of designers, QA engineers, and product
+                                managers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list3">
+                    <div class="objects">
+                        <div class="obj" data-title="Full Stack Developer" data-type="Al Adil Supermarket, Dubai">
+                            <a href="https://transguardgroup.com/" target="_blank">
+                                <img src=".\assets\cropped-logo-3-1.png" alt="AL ADIL TRADING"
+                                    style="width: 100%; height: 319px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="https://transguardgroup.com/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                IT Support Admin – TRANSGUARD GROUP LLC, Dubai, UAE
+                            </a>
+                        </h4>
+
+                        <ul class="skill-bullets">
+                            <li>Provided technical support and troubleshooting for hardware, software, and network
+                                issues.</li>
+                            <li>Maintained and updated IT infrastructure, ensuring optimal system performance and
+                                security.</li>
+                            <li>Performed routine system and network monitoring, backups, and updates.</li>
+                            <li>Collaborated with vendors and other departments to resolve complex IT issues
+                                efficiently.</li>
+                            <li>Managed user accounts, permissions, and access rights through Active Directory.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="list4">
+                    <div class="objects">
+                        <div class="obj" data-title="Intern - Web Developer" data-type="XYZ Tech Solutions">
+                            <a href="http://www.createch-software.com/" target="_blank">
+                                <img src=".\assets\createch.png" alt="AL ADIL TRADING">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4 style="display: inline-block; text-decoration: none; cursor: pointer; "
+                            onmouseover="this.style.textDecoration='underline';"
+                            onmouseout="this.style.textDecoration='none';">
+                            <a href="http://www.createch-software.com/" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                Full Stack Developer – CREATECH SOFTWARE PVT. LTD,
+                                Delhi, India
+                            </a>
+                        </h4>
+
+                        <ul class="skill-bullets">
+                            <li>Employment Assistance for Ex-Servicemen Officers for DGR (Ministry of Defence) Indian
+                                Army.</li>
+                            <li>Maintaining their software on weekly basis & update which is provided by DGR.</li>
+                            <li>Pharmaceutical Software solution for Army Hospital to manage and monitor inventory
+                                stocks efficiently.</li>
+                            <li>This system ensures that all pharmacy stock levels are tracked in real-time and provides
+                                automated alerts when stock quantities fall below predefined thresholds, improving
+                                inventory control and preventing stock outs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="contact" id="contact">
+        <div class="container-sm">
+            <h3>Get in Touch with Me</h3><br>
+            <div class="box" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+                <!-- -----------------------------------contact from---------------------- -->
+                <div id="contact-form" class="contact-form-section"
+                    style="flex: 1; min-width: 300px; margin: 0; padding: 0;">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="40b9cb8d-6cab-4d76-af1e-b201cb7dbeef">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email" name="email" required>
+                        <input type="tel" id="mobile" placeholder="Mobile Number" name="mobile" required
+                            pattern="[0-9]{10,15}">
+                        <textarea id="message" placeholder="Message" name="message" rows="5" required></textarea>
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <!-- ---------------------------map----------------------------- -->
+                <div style="flex: 1; margin: 0; padding: 0; min-width: 300px;">
+                    <iframe style="filter:grayscale(1) invert(1); border:none" ;
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.2395801569796!2d55.29369057538388!3d25.262524877668962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4315a016d01f%3A0x280c430ba1577226!2sMeena%20Bazar%20Burdubai!5e0!3m2!1sen!2sae!4v1754056686767!5m2!1sen!2sae&style=feature:all|element:labels|visibility:off&style=feature:geometry|color:0x242f3e&style=feature:landscape|color:0x2c3e50&style=feature:poi|visibility:off&style=feature:road|color:0x3498db&style=feature:transit|visibility:off&style=feature:water|color:0x2980b9"
+                        width="70%" height="410" style="border:0; max-width: 100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <br>
+
+
+
+            <!-- whatsapp and mobile icon  -->
+            <div>
+                <a href="https://wa.me/971524792549" target="_blank" style="
+                                            position: fixed;
+                                            bottom: 120px;
+                                            left: 20px;
+                                            background-color: #25D366;
+                                            color: white;
+                                            border-radius: 50%;
+                                            width: 65px;
+                                            height: 65px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-decoration: none;
+                                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                                            z-index: 999;
+                                            transition: all 0.3s ease;
+                                        ">
+                    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+                </a>
+                <a href="tel:+971524792549" style="
+                                            position: fixed;
+                                            bottom: 120px;
+                                            right: 20px;
+                                            background-color: #0d6efd; /* Bootstrap Blue */
+                                            color: white;
+                                            border-radius: 50%;
+                                            width: 60px;
+                                            height: 60px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-decoration: none;
+                                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                                            z-index: 999;
+                                            transition: all 0.3s ease;
+                                        ">
+                    <i class="fa fa-phone" style="font-size: 28px;"></i>
+                </a>
+            </div>
+            <br>
+
+
+            <!-- -----------------------------------contact from--------------------------------- -->
+            <div class="text" id="contactme">
+
+                <i class="fas fa-envelope"></i>
+                <a style="display: inline-block; text-decoration: none; cursor: pointer; font-size: 15px; color: inherit"
+                    onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+                    href="mailto:nailwalmohit28@gmail.com" class="email-link">
+                    nailwalmohit28@gmail.com
+                </a>
+                <p>
+                    <i class="fa fa-location-arrow" aria-hidden="true" style='font-size:15px'></i> Dubai, United
+                    Arab Emirates
+                </p>
+                <a href="tel:+971524792549"
+                    style="font-size: 15px; display: inline-block; text-decoration: none; cursor: pointer; color: inherit;"
+                    onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                    <i class="fa fa-phone"></i> +971-524792549
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="main-footer">
+            <p style="text-align:center;">© 2025 Mohit Nailwal. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/nailwalmohit/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/positve_electron/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Mohitnailwal1" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/MohitNailwal" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="tel:+91 6380657002"><i class="fa fa-phone"></i></a>
+                <a href="mailto:nailwalmohit28@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script for automate text writing------ -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Optional: Close menu on link click (mobile)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        // script for scroll up button
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top
+        backToTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        // ----blog page
+        document.querySelector('a[href="#blogs"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'blogs.html'; // Redirects to blog page
+        });
+
+        //script for dark mode
+        // Dark mode toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.dark-mode-toggle');
+            const html = document.documentElement;
+
+            // Check for saved theme preference or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', savedTheme);
+
+            toggleButton.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
